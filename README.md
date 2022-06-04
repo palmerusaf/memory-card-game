@@ -149,6 +149,8 @@ Project Link: [https://github.com/palmerusaf/memory-card-game](https://github.co
 ## Acknowledgments
 
 * [The Odin Project](https://www.theodinproject.com/)
+* Background photo by <a href="https://unsplash.com/@melodytemple?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Melody Temple</a> on <a href="https://unsplash.com/s/photos/jungle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
