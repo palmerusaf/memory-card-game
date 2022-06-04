@@ -124,9 +124,11 @@ Don't forget to give the project a star! Thanks again!
 
 
 <!-- LICENSE -->
-## License
+## Licenses
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+* Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+* Alphabet SVGs under CC0 License from [wikimedia](https://commons.wikimedia.org/wiki/Phoenician_alphabet)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
