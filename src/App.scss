@@ -1,3 +1,5 @@
+$smoked-glass:rgba(128, 128, 128, 0.85);
+
 html,
 body,
 .App,
@@ -7,6 +9,7 @@ body,
 }
 
 .App {
+  overflow: auto;
   text-align: center;
   background-image: url(./imgs/background.jpg);
   background-size: cover;
@@ -18,8 +21,27 @@ body,
   place-items: center;
 }
 
-.title{
-  background-color: rgba(128, 128, 128, .7);
-  padding: .5rem;
+.smoked-rounded{
+  background-color: $smoked-glass;
   border-radius: 15px;
 }
+
+.title {
+  padding: 0.5rem;
+}
+
+.card-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+  width: 100%;
+  &__card {
+    border: none;
+    margin: .5rem;
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.pop-in{}

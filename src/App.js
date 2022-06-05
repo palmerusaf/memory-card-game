@@ -1,28 +1,27 @@
 import "./App.scss";
 
 function App() {
-  const memoryImages = [];
+  const importAllImgs = () => {
+    const imgDirContext = require.context("./imgs/alpha/", false, /svg$/);
+    return imgDirContext.keys().map((key) => imgDirContext(key));
+  };
 
-  function importAll(r) {
-    r.keys().forEach((key) => memoryImages.push(r(key)));
-  }
+  const memoryImages = importAllImgs();
 
-  importAll(require.context("./imgs/alpha/", false, /svg$/));
-
-  function renderAllImages() {
-    return (
-      <div>
-        {memoryImages.map((image) => {
-          return <img src={image} alt="" />;
-        })}
-      </div>
-    );
-  }
+  const renderAllImages = () => (
+    <div className="card-area">
+      {memoryImages.map((image, index) => (
+        <button className="card-area__card smoked-rounded">
+          <img src={image} alt={`memory item ${index + 1}`} className='card-area__img' />
+        </button>
+      ))}
+    </div>
+  );
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="title">Test Your Memory</h1>
+        <h1 className="title smoked-rounded">Test Your Memory</h1>
         {renderAllImages()}
       </header>
     </div>
