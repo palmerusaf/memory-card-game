@@ -1,4 +1,5 @@
 import "./App.scss";
+import MemoryCard from "./components/memory-card.js";
 
 function App() {
   const importAllImgs = () => {
@@ -8,21 +9,15 @@ function App() {
 
   const memoryImages = importAllImgs();
 
-  const renderAllImages = () => (
-    <div className="card-area">
-      {memoryImages.map((image, index) => (
-        <button className="card-area__card smoked-rounded">
-          <img src={image} alt={`memory item ${index + 1}`} className='card-area__img' />
-        </button>
-      ))}
-    </div>
-  );
-
   return (
     <div className="App">
       <header className="App-header">
         <h1 className="title smoked-rounded">Test Your Memory</h1>
-        {renderAllImages()}
+        <div className="card-area">
+          {memoryImages.map((image, index) => (
+            <MemoryCard image={image} index={index} />
+          ))}
+        </div>
       </header>
     </div>
   );
