@@ -21,9 +21,21 @@ function App() {
 
   const [memoryImgs, setMemoryImgs] = useState(importAlphabet());
   const [score, setScore] = useState(0);
+  const [lastImgClicked, setLastImgClicked] = useState(null);
 
-  function handleClick() {
-    setMemoryImgs(_.shuffle(memoryImgs));
+  function handleClick(e) {
+    shuffleImgs();
+    handleScoring();
+
+    function handleScoring() {
+      const imgClicked = e.target.alt;
+      lastImgClicked !== imgClicked ? setScore(score + 5) : setScore(0);
+      setLastImgClicked(imgClicked);
+    }
+
+    function shuffleImgs() {
+      setMemoryImgs(_.shuffle(memoryImgs));
+    }
   }
 
   return (
