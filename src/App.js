@@ -1,33 +1,39 @@
-import "./App.scss";
+import React, { useState, useEffect } from "react";
+import Title from "./components/title.js";
+import UserScore from "./components/user-score.js";
 import MemoryCardGrid from "./components/memory-card-grid.js";
 import _ from "lodash";
-import React, { useState, useEffect } from "react";
+import "./App.scss";
 
 function App() {
   const importAlphabet = () => {
     const imgDirContext = require.context("./imgs/alpha/", false, /svg$/);
-    return imgDirContext
-      .keys()
-      .map((key) => ({ src: imgDirContext(key), alt: getAltFrom(key) }));
+    return imgDirContext.keys().map((imgKey) => ({
+      src: imgDirContext(imgKey),
+      alt: getAltFrom(imgKey),
+    }));
 
-    function getAltFrom(aKey) {
-      return aKey.replace("./", "").replace(/\.[^/.]+$/, "");
+    function getAltFrom(aImgKey) {
+      const letterName = aImgKey.replace("./", "").replace(/\.[^/.]+$/, "");
+      return `Phoenician Letter ${letterName}`;
     }
   };
 
-  const [memoryImages, setMemoryImages] = useState(importAlphabet());
+  const [memoryImgs, setMemoryImgs] = useState(importAlphabet());
+  const [score, setScore] = useState(0);
 
   function handleClick() {
-    setMemoryImages(_.shuffle(memoryImages));
+    setMemoryImgs(_.shuffle(memoryImgs));
   }
 
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="title smoked-rounded">Test Your Memory</h1>
+        <Title></Title>
+        <UserScore score={score} />
         <MemoryCardGrid
           handleClick={handleClick}
-          memoryImages={memoryImages}
+          memoryImgs={memoryImgs}
         ></MemoryCardGrid>
       </header>
     </div>
