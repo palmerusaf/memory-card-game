@@ -1,23 +1,28 @@
 import "./App.scss";
-import MemoryCard from "./components/memory-card.js";
+import MemoryCardGrid from "./components/memory-card-grid.js";
+import _ from "lodash";
+import React, { useState, useEffect } from "react";
 
 function App() {
-  const importAllImgs = () => {
+  const importAlphabet = () => {
     const imgDirContext = require.context("./imgs/alpha/", false, /svg$/);
     return imgDirContext.keys().map((key) => imgDirContext(key));
   };
 
-  const memoryImages = importAllImgs();
+  const [memoryImages, setMemoryImages] = useState(importAlphabet());
+
+  function handleClick() {
+    memoryImages = setMemoryImages(_.shuffle(memoryImages));
+  }
 
   return (
     <div className="App">
       <header className="App-header">
         <h1 className="title smoked-rounded">Test Your Memory</h1>
-        <div className="card-area">
-          {memoryImages.map((image, index) => (
-            <MemoryCard image={image} index={index} />
-          ))}
-        </div>
+        <MemoryCardGrid
+          handleClick={handleClick}
+          memoryImages={memoryImages}
+        ></MemoryCardGrid>
       </header>
     </div>
   );

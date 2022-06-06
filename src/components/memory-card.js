@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 function MemoryCard(props) {
-  const { image, index } = props;
+  const { image, index, handleClick } = props;
   return (
-    <button className="card-area__card smoked-rounded">
+    <button onClick={handleClick} className="card-area__card smoked-rounded">
       <img
         src={image}
         alt={`memory item ${index + 1}`}
