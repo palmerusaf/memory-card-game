@@ -4,8 +4,8 @@ function MemoryCardGrid(props) {
   const { memoryImages, handleClick } = props;
   return (
     <div className="card-area">
-      {memoryImages.map((image, index) => (
-        <MemoryCard handleClick={handleClick} image={image} index={index} />
+      {memoryImages.map((img) => (
+        <MemoryCard handleClick={handleClick} img={img} key={img.alt} />
       ))}
     </div>
   );

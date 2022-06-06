@@ -6,7 +6,13 @@ import React, { useState, useEffect } from "react";
 function App() {
   const importAlphabet = () => {
     const imgDirContext = require.context("./imgs/alpha/", false, /svg$/);
-    return imgDirContext.keys().map((key) => imgDirContext(key));
+    return imgDirContext
+      .keys()
+      .map((key) => ({ src: imgDirContext(key), alt: getAltFrom(key) }));
+
+    function getAltFrom(aKey) {
+      return aKey.replace("./", "").replace(/\.[^/.]+$/, "");
+    }
   };
 
   const [memoryImages, setMemoryImages] = useState(importAlphabet());
