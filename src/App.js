@@ -18,7 +18,7 @@ function App() {
   const [memoryImages, setMemoryImages] = useState(importAlphabet());
 
   function handleClick() {
-    memoryImages = setMemoryImages(_.shuffle(memoryImages));
+    setMemoryImages(_.shuffle(memoryImages));
   }
 
   return (
