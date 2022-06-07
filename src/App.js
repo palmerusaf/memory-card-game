@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { importAlphabet } from "./helpers/import-alphabet.js";
 import Title from "./components/title.js";
+import Directions from './components/directions.js'
 import UserScore from "./components/user-score.js";
 import HighScore from "./components/high-score.js";
 import MemoryCardGrid from "./components/memory-card-grid.js";
@@ -23,7 +24,6 @@ function App() {
       lastImgClicked !== imgClicked ? setScore(score + 5) : setScore(0);
       if (score > highScore) setHighScore(score);
     }
-    console.log(score);
 
     function shuffleImgs() {
       setMemoryImgs(_.shuffle(memoryImgs));
@@ -33,7 +33,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Title></Title>
+        <Title/>
+        <Directions/>
         <div className="score-field">
           <UserScore score={score} />
           <HighScore highScore={highScore} />
