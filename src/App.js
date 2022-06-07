@@ -2,33 +2,26 @@ import React, { useState } from "react";
 import { importAlphabet } from "./helpers/import-alphabet.js";
 import Title from "./components/title.js";
 import Directions from "./components/directions.js";
-import UserScore from "./components/user-score.js";
-import HighScore from "./components/high-score.js";
+import ScoreField from "./components/score-field.js";
+import { ScoreKeeper } from "./modules/score-keeper";
 import MemoryCardGrid from "./components/memory-card-grid.js";
-import _, { set } from "lodash";
+import _ from "lodash";
 import "./App.scss";
 
 function App() {
   const [memoryImgs, setMemoryImgs] = useState(importAlphabet());
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
-  const [previousSelectedImgs, setPreviousSelectedImgs] = useState([]);
 
   function handleClick(e) {
-    const imgSelected = e.target.alt;
-    shuffleImgs();
+    const selectedImg = e.target.alt;
     handleScoring();
-    console.log(previousSelectedImgs);
-    setPreviousSelectedImgs(previousSelectedImgs.concat(imgSelected));
+    shuffleImgs();
 
     function handleScoring() {
-      !isSelectedBefore() ? setScore(score + 5) : setScore(0);
-      if(isSelectedBefore())setPreviousSelectedImgs([])
-      if (score > highScore) setHighScore(score);
-    }
-
-    function isSelectedBefore() {
-      previousSelectedImgs.some((img) => img == imgSelected);
+      ScoreKeeper.score(selectedImg);
+      setScore(ScoreKeeper.getScore());
+      setHighScore(ScoreKeeper.getHighScore());
     }
 
     function shuffleImgs() {
@@ -41,10 +34,7 @@ function App() {
       <header className="App-header">
         <Title />
         <Directions />
-        <div className="score-field">
-          <UserScore score={score} />
-          <HighScore highScore={highScore} />
-        </div>
+        <ScoreField score={score} highScore={highScore} />
         <MemoryCardGrid
           handleClick={handleClick}
           memoryImgs={memoryImgs}

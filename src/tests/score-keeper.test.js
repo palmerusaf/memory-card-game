@@ -30,7 +30,7 @@ it("Scoring same play anytime after reset causes getScore to reset to 0", () => 
   expect(ScoreKeeper.getScore()).toEqual(0)
 });
 
-it("Scoring same play twice in a row causes getHighScore to return 5", () => {
+it("Scoring same play twice in a row causes getHighScore to return 10", () => {
   const { ScoreKeeper } = require("../modules/score-keeper");
   ScoreKeeper.score('foo');
   ScoreKeeper.score('bar');
