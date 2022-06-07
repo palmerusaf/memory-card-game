@@ -1,7 +1,7 @@
 function HighScore(props) {
   const { highScore } = props;
   return (
-    <div className="score-area smoked-rounded">High Score: {highScore}</div>
+    <div className="score-item smoked-rounded">High Score: {highScore}</div>
   );
 }
 

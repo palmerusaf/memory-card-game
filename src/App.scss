@@ -39,7 +39,7 @@ body,
   justify-content: space-evenly;
 }
 
-.score-area {
+.score-item {
   padding: 0.5rem;
 }
 
@@ -55,5 +55,24 @@ body,
   &__img {
     height: 100%;
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 810px) {
+  .directions,.score-item {
+    margin: .5rem;
+    padding: 0.3rem 1rem;
+    font-size: 1.5rem;
+  }
+
+  .score-field,
+  .card-area {
+    width: 90%;
+  }
+
+  .card-area {
+    grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr));
+    &__card {
+    }
   }
 }
