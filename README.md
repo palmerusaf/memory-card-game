@@ -89,12 +89,12 @@ The Purpose of this project is to apply everything I have learned so far about R
 
 ## Roadmap
 
-- [ ] Track If User Has Click Image Before
-- [ ] Track User's Score
-  - [ ] Track High Score
-- [ ] Add Images
-- [ ] Randomize Image Order
-- [ ] Make Mobile Responsive
+- [X] Track If User Has Click Image Before
+- [X] Track User's Score
+  - [X] Track High Score
+- [X] Add Images
+- [X] Randomize Image Order
+- [X] Make Mobile Responsive
 
 See the [open issues](https://github.com/palmerusaf/memory-card-game/issues) for a full list of proposed features (and known issues).
 
