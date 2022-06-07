@@ -7,8 +7,6 @@
 *** Thanks again! Now go create something AMAZING! :D
 -->
 
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -17,14 +15,13 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -49,8 +46,6 @@
   </p>
 </div>
 
-
-
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -70,28 +65,28 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://palmerusaf.github.io/memory-card-game)
 
-This project is from the open source web dev course call The Odin Project. It is designed to test your memory.
+This project is from the open source web dev course called The Odin Project. It is designed to test your memory.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 ### Built With
 
-* [React.js](https://reactjs.org/)
+- [React.js](https://reactjs.org/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Purpose
+
 The Purpose of this project is to apply everything I have learned so far about React components and hooks.
 
 <!-- ROADMAP -->
+
 ## Roadmap
 
 - [ ] Track If User Has Click Image Before
@@ -105,9 +100,8 @@ See the [open issues](https://github.com/palmerusaf/memory-card-game/issues) for
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
@@ -121,20 +115,18 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- LICENSE -->
+
 ## Licenses
 
-* Distributed under the MIT License. See `LICENSE.txt` for more information.
+- Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-* Alphabet SVGs under CC0 License from [wikimedia](https://commons.wikimedia.org/wiki/Phoenician_alphabet)
+- Alphabet SVGs under CC0 License from [wikimedia](https://commons.wikimedia.org/wiki/Phoenician_alphabet)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
 Branden Palmer - [@branden_palmer8](https://twitter.com/branden_palmer8) - brandenpalmer08@gmail.com
@@ -143,21 +135,18 @@ Project Link: [https://github.com/palmerusaf/memory-card-game](https://github.co
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- ACKNOWLEDGMENTS -->
+
 ## Acknowledgments
 
-* [The Odin Project](https://www.theodinproject.com/)
-* Background photo by <a href="https://unsplash.com/@melodytemple?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Melody Temple</a> on <a href="https://unsplash.com/s/photos/jungle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
+- [The Odin Project](https://www.theodinproject.com/)
+- Background photo by <a href="https://unsplash.com/@melodytemple?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Melody Temple</a> on <a href="https://unsplash.com/s/photos/jungle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/palmerusaf/memory-card-game.svg?style=for-the-badge
 [contributors-url]: https://github.com/palmerusaf/memory-card-game/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/palmerusaf/memory-card-game.svg?style=for-the-badge
@@ -170,4 +159,4 @@ Project Link: [https://github.com/palmerusaf/memory-card-game](https://github.co
 [license-url]: https://github.com/palmerusaf/memory-card-game/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/branden-palmer-968765120
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: ./src//imgs/screen-shot.png
