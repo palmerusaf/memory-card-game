@@ -119,7 +119,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## Licenses
 
-- Distributed under the MIT License. See `LICENSE.txt` for more information.
+- Distributed under the MIT License. See `LICENSE` for more information.
 
 - Alphabet SVGs under CC0 License from [wikimedia](https://commons.wikimedia.org/wiki/Phoenician_alphabet)
 
@@ -156,7 +156,7 @@ Project Link: [https://github.com/palmerusaf/memory-card-game](https://github.co
 [issues-shield]: https://img.shields.io/github/issues/palmerusaf/memory-card-game.svg?style=for-the-badge
 [issues-url]: https://github.com/palmerusaf/memory-card-game/issues
 [license-shield]: https://img.shields.io/github/license/palmerusaf/memory-card-game.svg?style=for-the-badge
-[license-url]: https://github.com/palmerusaf/memory-card-game/blob/master/LICENSE.txt
+[license-url]: https://github.com/palmerusaf/memory-card-game/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/branden-palmer-968765120
 [product-screenshot]: ./src//imgs/screen-shot.png
